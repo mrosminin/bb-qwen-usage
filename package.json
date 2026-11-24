@@ -1,0 +1,25 @@
+{
+  "name": "bb-plugin-qwen-usage",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Read Qwen subscription quota through a dedicated BB browser tab.",
+  "license": "MIT",
+  "author": "Leonid Osminin",
+  "repository": { "type": "git", "url": "https://github.com/mrosminin/bb-qwen-usage.git" },
+  "homepage": "https://github.com/mrosminin/bb-qwen-usage#readme",
+  "bugs": { "url": "https://github.com/mrosminin/bb-qwen-usage/issues" },
+  "keywords": ["bb-plugin", "qwen", "usage", "quota"],
+  "engines": { "bb": ">=0.50.1", "bbPluginSdk": ">=0.6.157" },
+  "bb": {
+    "name": "Qwen Usage", "description": "Qwen Plus/Pro quota in Provider usage.",
+    "branding": { "icon": "./icons/usage.svg" }, "server": "./server.ts"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.ts",
+    "typecheck": "tsc --noEmit",
+    "build": "bb plugin build"
+  },
+  "dependencies": { "zod": "4.6.7" },
+  "devDependencies": { "@get-bb/plugin-sdk": "0.6.157", "@types/node": "^24.0.0", "typescript": "5.9.3" }
+}
